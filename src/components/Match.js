@@ -1,4 +1,4 @@
-import React from "react"; //optional
+import React from "react";
 
 function Match(props) {
   const {players, winner, scoreDifference} = props;

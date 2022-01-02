@@ -1,9 +1,8 @@
-import React from "react"; //optional
+import React from "react";
 import Match from "./Match";
 
 function MatchList(props) {
   const {matchData} = props;
-  console.log("matchData ", matchData);
   const matchList = matchData.map(match => {
     return <Match key={match.matchNumber} {...match}/>
   });
