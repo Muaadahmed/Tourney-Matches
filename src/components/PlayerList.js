@@ -1,11 +1,14 @@
 import React from "react"; //optional
 import Player from "./Player";
 function PlayerList(props) {
-  const processedPlayerData = props;
+  const {playerData} = props;
+  const playerList = playerData.map(player => {
+    return <Player key={player.gamerTag} {...player}/>
+  });
   return (
     <section className="PlayerList">
       <h1>Current participating players</h1>
-      <Player {...processedPlayerData}/>
+      {playerList}
     </section>
   );
 }
